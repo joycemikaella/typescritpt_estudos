@@ -77,7 +77,6 @@ class Carro {
         return this.marca
     }
 
-
     setCor(cor: string): void {
         this.cor = cor
     }
