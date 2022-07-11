@@ -16,14 +16,15 @@ class Produto {
         return this.preco * (taxa / 100);
     }
     calcularDesconto(taxa) {
-        return this.preco * (taxa / 100);
+        let resultado = this.preco * (taxa / 100);
+        return resultado;
     }
     precoComDesconto(taxa) {
-        console.log(`Preço com desconto 1; ${p1.preco - p1.calcularDesconto(10)}`);
+        console.log(`Preço com desconto 1; ${(p1.preco - p1.calcularDesconto(taxa)).toFixed(2)}`);
     }
 }
 let p1 = new Produto(1, 'Feijão', 7.89, 10);
 p1.show();
-console.log(p1.calcularDesconto(10)); //mostra o valor do desconto
-p1.precoComDesconto(10);
+console.log(p1.calcularDesconto(10).toFixed(2)); //mostra o valor do desconto
+p1.precoComDesconto(20);
 //# sourceMappingURL=herancacominterface.js.map
